@@ -53,6 +53,10 @@ function hideGlow() {
 }
 
 window.addEventListener('pointermove', event => {
+  if (event.target instanceof Element && event.target.closest('.impact-card')) {
+    hideGlow();
+    return;
+  }
   if (!pointerEffects.matches || event.pointerType === 'touch') return;
   pointerX = event.clientX;
   pointerY = event.clientY;

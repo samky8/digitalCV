@@ -134,7 +134,13 @@
 }
 
 .impact-card.is-tilting::after {
-  opacity: 1;
+  opacity: 0;
+}
+
+/* Keep all lighting off the card content, including while the pointer is still. */
+body:has(.impact-card:hover) .cursor-glow {
+  opacity: 0;
+  transition: none;
 }
 
 .impact-card.is-tilting .card-art img {
