@@ -1,0 +1,252 @@
+/* A single typographic voice, with copper as the contrasting accent. */
+.brand-dot,
+.metric > span {
+  color: var(--copper);
+}
+
+.hero h1 {
+  font-weight: 600;
+  font-size: clamp(52px, 6.05vw, 84px);
+  line-height: 1.02;
+  letter-spacing: -.065em;
+  max-width: 670px;
+}
+
+.hero .eyebrow::before {
+  content: '';
+  width: 25px;
+  height: 2px;
+  background: var(--copper);
+}
+
+.hero .eyebrow .status-dot {
+  display: none;
+}
+
+.portrait {
+  position: relative;
+  transform: none;
+  padding: 0;
+  background: transparent;
+}
+
+.portrait::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 95px;
+  height: 95px;
+  border-top: 3px solid var(--copper);
+  border-right: 3px solid var(--copper);
+  z-index: -1;
+}
+
+.portrait-image {
+  border-radius: 3px;
+}
+
+.portrait img {
+  filter: saturate(.8);
+}
+
+.portrait figcaption {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.portrait figcaption > span:last-child {
+  color: var(--copper);
+}
+
+.primary {
+  box-shadow: 0 3px 0 #233d2e;
+}
+
+.primary:hover {
+  box-shadow: 0 5px 0 #233d2e;
+}
+
+.text-link,
+.nav-contact {
+  transition: color .2s, border-color .2s, background .2s;
+}
+
+.text-link:hover {
+  color: var(--copper);
+  border-color: var(--copper);
+}
+
+.nav-contact:hover {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--paper);
+}
+
+.impact-grid {
+  align-items: stretch;
+}
+
+.impact-card {
+  position: relative;
+  padding-top: 0;
+  border-radius: 7px;
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  transform: perspective(1100px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+  transition: transform .4s ease, box-shadow .4s ease, border-color .3s;
+  isolation: isolate;
+}
+
+.card-art {
+  margin: 0 -26px 23px;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+  background: var(--accent);
+}
+
+.card-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+  transition: transform .6s cubic-bezier(.2,.7,.3,1);
+}
+
+.impact-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(350px circle at var(--shine-x, 50%) var(--shine-y, 0%), #ffffff30, transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+  z-index: 2;
+}
+
+.impact-card.is-tilting {
+  transition: transform .12s ease-out, box-shadow .3s, border-color .3s;
+  box-shadow: 0 20px 40px -22px #1d382b60;
+  border-color: #a4b49a;
+  z-index: 1;
+}
+
+.impact-card.is-tilting::after {
+  opacity: 1;
+}
+
+.impact-card.is-tilting .card-art img {
+  transform: scale(1.035);
+}
+
+.impact-card:focus-within {
+  border-color: var(--copper);
+  box-shadow: 0 0 0 2px #b6573520;
+}
+
+.card-footer {
+  position: relative;
+  min-height: 64px;
+  align-items: center;
+  gap: 14px;
+  transition: color .2s;
+}
+
+.card-footer:hover {
+  color: var(--copper);
+}
+
+.card-link-arrow {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: transform .2s, color .2s, background .2s;
+}
+
+.card-footer:hover .card-link-arrow,
+.card-footer:focus-visible .card-link-arrow {
+  transform: rotate(45deg);
+  background: var(--copper);
+  border-color: var(--copper);
+  color: white;
+}
+
+.timeline details {
+  scroll-margin-top: 24px;
+}
+
+.timeline details:target {
+  border-left: 3px solid var(--copper);
+  padding-left: 18px;
+}
+
+.timeline details[open] .date {
+  color: var(--copper);
+}
+
+.expertise-list article > span {
+  color: var(--copper);
+}
+
+.contact {
+  border-top: 4px solid var(--copper);
+}
+
+.contact h2 .heading-accent {
+  color: var(--copper);
+}
+
+.cursor-glow {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, #d8855721 0%, #d885570b 35%, transparent 68%);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+  transition: opacity .3s;
+  will-change: transform;
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .cursor-glow { display: block; }
+  .cursor-glow.is-visible { opacity: 1; }
+}
+
+@media (max-width: 1000px) {
+  .hero h1 { font-size: clamp(46px, 6.1vw, 68px); }
+  .card-art { margin-inline: -18px; }
+}
+
+@media (max-width: 720px) {
+  .hero h1 { font-size: clamp(48px, 10vw, 70px); }
+  .hero .eyebrow::before { width: 14px; }
+  .hero .eyebrow { letter-spacing: .6px; }
+  .portrait::before { right: -10px; top: -10px; width: 65px; height: 65px; }
+  .impact-card { padding-top: 0; }
+  .card-art { margin-inline: -24px; }
+  .card-top { flex-direction: row; }
+  h2 { font-size: clamp(33px, 8vw, 41px); }
+  .contact h2 { font-size: 54px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .impact-card { transform: none; }
+  .card-art img { transform: none !important; }
+}
+
+@media print {
+  .cursor-glow, .card-art { display: none; }
+  .impact-card { transform: none; box-shadow: none; padding-top: 20px; }
+  .hero h1 { font-size: 35pt; }
+}

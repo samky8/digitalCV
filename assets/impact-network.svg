@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+<defs><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#355441" opacity=".15"/></pattern></defs>
+<rect width="800" height="480" fill="#dce4d3"/><rect width="800" height="480" fill="url(#dots)"/>
+<g fill="none" stroke="#6f8968" stroke-width="1.5"><path d="M400 248L208 141L117 275L260 366L400 248L563 124L690 270L549 376L400 248L208 141L392 87L563 124M260 366L549 376M117 275L400 248L690 270M392 87L400 248"/><circle cx="400" cy="248" r="112" stroke-dasharray="4 9"/><circle cx="400" cy="248" r="178" stroke-opacity=".3"/></g>
+<g fill="#355441"><circle cx="208" cy="141" r="25"/><circle cx="117" cy="275" r="15"/><circle cx="260" cy="366" r="22"/><circle cx="563" cy="124" r="23"/><circle cx="690" cy="270" r="15"/><circle cx="549" cy="376" r="24"/><circle cx="392" cy="87" r="14"/></g>
+<circle cx="400" cy="248" r="54" fill="#b65735"/><circle cx="400" cy="248" r="65" fill="none" stroke="#b65735" stroke-opacity=".4"/>
+<g stroke="#f5f3ed" stroke-width="2" fill="none"><circle cx="400" cy="235" r="10"/><path d="M380 266C380 245 420 245 420 266"/></g>
+<g font-family="Arial,sans-serif" fill="#355441"><text x="38" y="48" font-size="12" letter-spacing="3">STRONGER TOGETHER</text><text x="38" y="443" font-size="12" letter-spacing="2">PEOPLE. IDEAS. POSSIBILITY.</text><text x="744" y="48" font-size="14">03</text></g>
+</svg>

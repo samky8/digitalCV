@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#f5f3ed" stroke-opacity=".08"/></pattern><radialGradient id="light"><stop stop-color="#66886a"/><stop offset="1" stop-color="#253f32"/></radialGradient></defs>
+<rect width="800" height="480" fill="#253f32"/><rect width="800" height="480" fill="url(#grid)"/>
+<circle cx="426" cy="250" r="178" fill="url(#light)" stroke="#a7bea1" stroke-width="1.5"/>
+<g fill="none" stroke="#dce4d3" stroke-opacity=".4"><ellipse cx="426" cy="250" rx="95" ry="178"/><ellipse cx="426" cy="250" rx="158" ry="178"/><ellipse cx="426" cy="250" rx="178" ry="63"/><ellipse cx="426" cy="250" rx="178" ry="130"/><path d="M248 250H604M426 72V428"/></g>
+<g fill="none" stroke="#ed9a70" stroke-width="2"><path d="M312 165Q550 -12 641 187"/><path d="M312 165Q224 323 139 312"/><path d="M312 165Q517 173 550 335"/></g>
+<g fill="#ed9a70"><circle cx="641" cy="187" r="6"/><circle cx="139" cy="312" r="6"/><circle cx="550" cy="335" r="6"/></g>
+<circle cx="312" cy="165" r="16" fill="#ed9a70" fill-opacity=".2"/><circle cx="312" cy="165" r="7" fill="#ed9a70"/>
+<g font-family="Arial,sans-serif" fill="#f5f3ed"><text x="38" y="48" font-size="12" letter-spacing="3">BEYOND BORDERS</text><text x="38" y="443" font-size="12" letter-spacing="2">CANADA → THE WORLD</text><text x="744" y="48" font-size="14">01</text></g>
+<path d="M701 403H751V353M751 403L701 353" transform="rotate(-90 726 378)" fill="none" stroke="#ed9a70" stroke-width="2"/>
+</svg>
