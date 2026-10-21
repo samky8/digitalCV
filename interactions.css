@@ -298,3 +298,30 @@
 @media (forced-colors: active), print {
   .wordmark-name { background: none; color: var(--ink); -webkit-text-fill-color: currentColor; }
 }
+
+/* Compact introduction with the professional/location line under the portrait. */
+.hero {
+  padding-block: 48px;
+  align-items: center;
+}
+.hero h1 { margin-top: 0; }
+.portrait { margin-top: 0; }
+.portrait .portrait-caption {
+  display: block;
+  padding-block: 12px;
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.portrait .portrait-caption .caption-location {
+  font-size: inherit;
+  color: inherit;
+  white-space: nowrap;
+}
+@media (max-width: 720px) {
+  .hero { padding-block: 32px; gap: 26px; }
+  .portrait { margin-top: 0; }
+}
+@media print {
+  .hero { padding-block: 20px; }
+}
