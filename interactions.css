@@ -99,7 +99,7 @@
 }
 
 .card-art {
-  margin: 0 -26px 23px;
+  margin: 0 -26px 14px;
   border-radius: 6px 6px 0 0;
   overflow: hidden;
   background: var(--accent);
@@ -112,6 +112,10 @@
   aspect-ratio: 5 / 3;
   object-fit: cover;
   transition: transform .6s cubic-bezier(.2,.7,.3,1);
+}
+
+.impact-card .metric {
+  margin-top: 0;
 }
 
 .impact-card::after {
