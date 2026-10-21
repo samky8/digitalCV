@@ -28,7 +28,7 @@ function openLinkedRole() {
 }
 window.addEventListener('hashchange', openLinkedRole);
 window.addEventListener('load', openLinkedRole);
-document.querySelectorAll('a.card-footer').forEach(link => {
+document.querySelectorAll('a.card-footer[href^="#role-"]').forEach(link => {
   link.addEventListener('click', () => {
     const role = document.getElementById(link.hash.slice(1));
     if (role) role.open = true;
