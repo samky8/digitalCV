@@ -1,5 +1,5 @@
 /* A single typographic voice, with copper as the contrasting accent. */
-.brand-dot,
+.brand-leaf,
 .metric > span {
   color: var(--copper);
 }
@@ -249,4 +249,14 @@
   .cursor-glow, .card-art { display: none; }
   .impact-card { transform: none; box-shadow: none; padding-top: 20px; }
   .hero h1 { font-size: 35pt; }
+}
+
+/* Canadian maple-leaf signature, scaled with the wordmark. */
+.brand-leaf {
+  display: inline-block;
+  width: .7em;
+  height: .77em;
+  margin-left: .18em;
+  vertical-align: -.01em;
+  flex-shrink: 0;
 }
