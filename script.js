@@ -11,7 +11,7 @@ window.addEventListener('afterprint', () => {
 });
 
 // Preserve the useful section links from the previous Carrd website.
-const legacySections = { '#cv': '#experience', '#exp': '#experience', '#edu': '#about', '#vol': '.additional', '#cert': '.additional', '#skl': '.expertise', '#lang': '#about' };
+const legacySections = { '#cv': '#experience', '#exp': '#experience', '#edu': '#about', '#vol': '#experience', '#cert': '#about', '#skl': '#experience', '#lang': '#about' };
 function followLegacyLink() {
   const target = legacySections[window.location.hash];
   if (target) document.querySelector(target)?.scrollIntoView();
@@ -28,7 +28,7 @@ function openLinkedRole() {
 }
 window.addEventListener('hashchange', openLinkedRole);
 window.addEventListener('load', openLinkedRole);
-document.querySelectorAll('.card-footer').forEach(link => {
+document.querySelectorAll('a.card-footer').forEach(link => {
   link.addEventListener('click', () => {
     const role = document.getElementById(link.hash.slice(1));
     if (role) role.open = true;

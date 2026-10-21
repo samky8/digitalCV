@@ -306,6 +306,42 @@ body:has(.impact-card:hover) .cursor-glow {
 }
 
 /* Compact introduction with the professional/location line under the portrait. */
+.closing-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.closing-section h2 {
+  font-size: clamp(34px, 4vw, 50px);
+  margin: 0 0 24px;
+}
+.closing-copy > p {
+  font-size: 14px;
+  color: #53604e;
+  margin-bottom: 16px;
+  max-width: 600px;
+}
+.closing-copy h3 { font-size: 21px; margin-top: 26px; }
+.closing-links { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 12px; }
+.closing-facts > p { padding: 18px 0; border-top: 1px solid #bcc9b1; }
+.closing-facts strong { display: block; font-weight: 550; font-size: 14px; }
+.closing-facts span { display: block; margin-top: 5px; font-size: 12px; color: #53604e; }
+.earlier-roles { list-style: none; padding-left: 0 !important; margin-top: 0; }
+.earlier-roles li { margin: 0 0 18px; }
+.earlier-roles strong, .earlier-roles span { display: block; }
+.earlier-roles strong { color: var(--ink); font-weight: 500; }
+.earlier-date { font-size: 11px; margin-top: 3px; }
+.earlier-experience .text-link { display: inline-block; margin-top: 5px; }
+@media (max-width: 720px) {
+  .closing-grid { grid-template-columns: 1fr; gap: 30px; }
+  .closing-links { gap: 20px; }
+}
+@media print {
+  .closing-section { display: block; background: white; }
+  .closing-grid { gap: 30px; }
+}
+
 .projects-section {
   border-top: 1px solid var(--line);
   background: #efeee7;
