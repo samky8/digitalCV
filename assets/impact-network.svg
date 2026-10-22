@@ -6,4 +6,31 @@
 <circle cx="400" cy="248" r="54" fill="#b65735"/><circle cx="400" cy="248" r="65" fill="none" stroke="#b65735" stroke-opacity=".4"/>
 <g stroke="#f5f3ed" stroke-width="2" fill="none"><circle cx="400" cy="235" r="10"/><path d="M380 266C380 245 420 245 420 266"/></g>
 <g font-family="Arial,sans-serif" fill="#355441"><text x="38" y="48" font-size="12" letter-spacing="3">STRONGER TOGETHER</text><text x="38" y="443" font-size="12" letter-spacing="2">PEOPLE. IDEAS. POSSIBILITY.</text><text x="744" y="48" font-size="14">03</text></g>
+<style>
+  .network-light { animation: network-travel 8s linear infinite; }
+  .network-light:nth-child(2) { animation-delay: -2.6s; }
+  .network-light:nth-child(3) { animation-delay: -5.3s; }
+  .pulse { transform-box: fill-box; transform-origin: center; animation: beacon 4.5s ease-out infinite; }
+  .pulse:nth-child(2n) { animation-delay: -1.5s; }
+  .pulse:nth-child(3n) { animation-delay: -3s; }
+  @keyframes beacon { 0% { transform: scale(1); opacity: .7; } 80%, 100% { transform: scale(1.65); opacity: 0; } }
+  @keyframes network-travel { from { stroke-dashoffset: 110; } to { stroke-dashoffset: 0; } }
+  @media (prefers-reduced-motion: reduce), print { .motion { display: none; } }
+</style>
+<!-- Slow signals follow the connections, stopping at the edges of the nodes. -->
+<g class="motion" fill="none" stroke="#b65735" stroke-width="3.5" stroke-opacity=".9" stroke-linecap="round" stroke-dasharray="20 90" pointer-events="none">
+  <path class="network-light" pathLength="100" d="M230 153L353 222"/>
+  <path class="network-light" pathLength="100" d="M443 215L545 138"/>
+  <path class="network-light" pathLength="100" d="M441 283L531 360"/>
+</g>
+<g class="motion" fill="none" stroke="#355441" stroke-width="2" pointer-events="none">
+  <circle class="pulse" cx="208" cy="141" r="28"/>
+  <circle class="pulse" cx="117" cy="275" r="18"/>
+  <circle class="pulse" cx="260" cy="366" r="25"/>
+  <circle class="pulse" cx="563" cy="124" r="26"/>
+  <circle class="pulse" cx="690" cy="270" r="18"/>
+  <circle class="pulse" cx="549" cy="376" r="27"/>
+  <circle class="pulse" cx="392" cy="87" r="17"/>
+  <circle class="pulse" cx="400" cy="248" r="65" stroke="#b65735"/>
+</g>
 </svg>

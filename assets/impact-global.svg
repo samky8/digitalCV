@@ -8,4 +8,28 @@
 <circle cx="312" cy="165" r="16" fill="#ed9a70" fill-opacity=".2"/><circle cx="312" cy="165" r="7" fill="#ed9a70"/>
 <g font-family="Arial,sans-serif" fill="#f5f3ed"><text x="38" y="48" font-size="12" letter-spacing="3">BEYOND BORDERS</text><text x="38" y="443" font-size="12" letter-spacing="2">CANADA → THE WORLD</text><text x="744" y="48" font-size="14">01</text></g>
 <path d="M701 403H751V353M751 403L701 353" transform="rotate(-90 726 378)" fill="none" stroke="#ed9a70" stroke-width="2"/>
+<style>
+  .route-light { animation: route-travel 8s linear infinite; }
+  .route-light:nth-child(2) { animation-delay: -2.6s; }
+  .route-light:nth-child(3) { animation-delay: -5.3s; }
+  .pulse { transform-box: fill-box; transform-origin: center; animation: beacon 4s ease-out infinite; }
+  .pulse:nth-child(2) { animation-delay: -1s; }
+  .pulse:nth-child(3) { animation-delay: -2s; }
+  .pulse:nth-child(4) { animation-delay: -3s; }
+  @keyframes beacon { 0% { transform: scale(1); opacity: .8; } 80%, 100% { transform: scale(2.8); opacity: 0; } }
+  @keyframes route-travel { from { stroke-dashoffset: 110; } to { stroke-dashoffset: 0; } }
+  @media (prefers-reduced-motion: reduce), print { .motion { display: none; } }
+</style>
+<!-- Soft highlights travel along the existing routes without moving the artwork. -->
+<g class="motion" fill="none" stroke="#fff0d9" stroke-width="4" stroke-linecap="round" stroke-opacity=".9" stroke-dasharray="15 95" pointer-events="none">
+  <path class="route-light" pathLength="100" d="M312 165Q550 -12 641 187"/>
+  <path class="route-light" pathLength="100" d="M312 165Q224 323 139 312"/>
+  <path class="route-light" pathLength="100" d="M312 165Q517 173 550 335"/>
+</g>
+<g class="motion" fill="none" stroke="#ed9a70" stroke-width="2" pointer-events="none">
+  <circle class="pulse" cx="312" cy="165" r="10"/>
+  <circle class="pulse" cx="641" cy="187" r="9"/>
+  <circle class="pulse" cx="139" cy="312" r="9"/>
+  <circle class="pulse" cx="550" cy="335" r="9"/>
+</g>
 </svg>
