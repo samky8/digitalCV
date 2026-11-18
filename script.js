@@ -35,6 +35,19 @@ document.querySelectorAll('a.card-footer[href^="#role-"]').forEach(link => {
   });
 });
 
+// Track CV downloads as a dedicated GA4 event without delaying the download.
+document.querySelectorAll('a[download][href$=".pdf"]').forEach(link => {
+  link.addEventListener('click', () => {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', 'cv_download', {
+      file_name: link.getAttribute('href')?.split('/').pop(),
+      link_text: link.textContent.trim(),
+      link_url: link.href,
+      link_location: link.closest('section')?.id || 'page'
+    });
+  });
+});
+
 // Pointer effects are progressive enhancement, disabled for touch and reduced motion.
 const pointerEffects = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
 const glow = document.createElement('div');
